@@ -13,6 +13,7 @@
 
     /*^ Effects */
     --box-shadow: 0 0 80px rgba(197, 157, 255);
+    --gradient-accent-top: linear-gradient(180deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color));
     --gradient-accent-right: linear-gradient(270deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color), var(--bg-color));
     --gradient-accent-left: linear-gradient(90deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color), var(--bg-color));
 
@@ -41,6 +42,19 @@ body {
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-accent-top);
+    border-radius: 2px;
 }
 
 .container {
