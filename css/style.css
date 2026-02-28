@@ -242,12 +242,22 @@ section {
 @media (max-width: 768px) {
     .section-content {
         justify-content: center;
-        gap: 50px;
+        gap: 70px;
     }
 
     .back-effect {
         width: 450px;
         height: 450px;
+    }
+
+    .bg-1 {
+        top: -30%;
+        left: -10%;
+    }
+
+    .bg-2 {
+        top: 50%;
+        right: -10%;
     }
 
     .home-section .text {
