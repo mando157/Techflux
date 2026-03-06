@@ -181,6 +181,10 @@ section {
     color: var(--light-primary);
 }
 
+.section-content .typing {
+    width: 278px;
+}
+
 .home-section .button {
     position: relative;
     width: 190px;
@@ -371,7 +375,9 @@ section {
     }
 
     .section-content .home-heading {
-        font-size: 50px;
+        font-size: 55px;
+        padding: 0 20px;
+        height: 120px;
     }
 
     .section-content .home-images {
@@ -396,7 +402,7 @@ section {
 
     /*^ Our Work Section */
 
-    .our-work .section-title h2{
+    .our-work .section-title h2 {
         font-size: 40px;
     }
 
