@@ -301,12 +301,58 @@ section {
 
 .our-work .work-images .work-image {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 15px;
 }
 
+.work-images .img-1,
+.work-images .img-2 {
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
 
+.work-images .img-1::before,
+.work-images .img-2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-accent-top);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.work-images .img-1:hover::before,
+.work-images .img-2:hover::before {
+    opacity: 0.5;
+}
+
+.work-images .img-1 h2,
+.work-images .img-2 h2 {
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-primary);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s ease, top 1s ease;
+}
+
+body .work-images .img-1:hover h2,
+body .work-images .img-2:hover h2 {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition-delay: 0.3s;
+}
 
 /*! ,,,,,,,,,,,,,,,,,,, Responsive ,,,,,,,,,,,,,,,,,,, */
 
@@ -332,7 +378,8 @@ section {
         text-align: center;
     }
 
-    .our-work .work-images .work-image {
+    .work-images .img-1,
+    .work-images .img-2 {
         width: 50%;
         height: 200px;
     }
@@ -410,14 +457,18 @@ section {
         flex-direction: column;
     }
 
-    .our-work .work-images .work-image {
+    .work-images .img-1,
+    .work-images .img-2 {
         width: 80%;
-        height: 200px;
+        height: 180px;
     }
 
     .our-work .section-descreption p {
         font-size: 14px;
     }
 
-
+    .work-images .img-1 h2,
+    .work-images .img-2 h2 {
+        font-size: 14px;
+    }
 }
