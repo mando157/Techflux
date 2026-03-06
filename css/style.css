@@ -14,8 +14,8 @@
     /*^ Effects */
     --box-shadow: 0 0 80px rgba(197, 157, 255);
     --gradient-accent-top: linear-gradient(180deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color));
-    --gradient-accent-right: linear-gradient(270deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color), var(--bg-color));
-    --gradient-accent-left: linear-gradient(90deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color), var(--bg-color));
+    --gradient-accent-right: linear-gradient(270deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color), var(--bg-color), var(--bg-color));
+    --gradient-accent-left: linear-gradient(90deg, var(--glow-light), var(--light-primary), var(--secondry-color), var(--bg-color), var(--bg-color), var(--bg-color));
 
     /*^ Font Family */
     --primary-font-family: "Google Sans", sans-serif;
@@ -75,6 +75,14 @@ li {
 
 section {
     position: relative;
+}
+
+.hr {
+    margin: 20px auto;
+    width: 100%;
+    height: 2px;
+    border: none;
+    background: var(--gradient-accent-left);
 }
 
 /*^ Home Section */
@@ -169,7 +177,7 @@ section {
     text-align: center;
 }
 
-.section-content .home-heading span {
+.active {
     color: var(--light-primary);
 }
 
@@ -246,7 +254,91 @@ section {
     transform: scale(0.97);
 }
 
+/*^ Our Work Section */
+.our-work {
+    height: 100svh;
+}
+
+.our-work .work-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.our-work .section-title {
+    display: flex;
+}
+
+.our-work .section-title h2 {
+    font-size: 60px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.our-work .section-descreption {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.our-work .section-descreption p {
+    font-size: 16px;
+    max-width: 700px;
+    line-height: 1.5;
+}
+
+.our-work .work-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.our-work .work-images .work-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+
+
 /*! ,,,,,,,,,,,,,,,,,,, Responsive ,,,,,,,,,,,,,,,,,,, */
+
+
+
+
+/*& max-width: 1200px */
+
+@media (max-width: 1200px) {
+
+    /*^ Our Work Section */
+    .our-work .work-content {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .our-work .section-title {
+        justify-content: center;
+    }
+
+    .our-work .section-descreption {
+        align-items: center;
+        text-align: center;
+    }
+
+    .our-work .work-images .work-image {
+        width: 50%;
+        height: 200px;
+    }
+}
+
+/*& max-width: 992px */
+
+@media (max-width: 992px) {}
+
+
 /*& max-width: 576px */
 @media (max-width: 576px) {}
 
@@ -302,14 +394,24 @@ section {
         height: 25px;
     }
 
+    /*^ Our Work Section */
+
+    .our-work .section-title h2{
+        font-size: 40px;
+    }
+
+    .our-work .work-images {
+        flex-direction: column;
+    }
+
+    .our-work .work-images .work-image {
+        width: 80%;
+        height: 200px;
+    }
+
+    .our-work .section-descreption p {
+        font-size: 14px;
+    }
+
 
 }
-
-
-/*& max-width: 992px */
-
-@media (max-width: 992px) {}
-
-/*& max-width: 1200px */
-
-@media (max-width: 1200px) {}
